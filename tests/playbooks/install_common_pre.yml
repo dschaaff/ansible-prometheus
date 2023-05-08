@@ -57,8 +57,6 @@
   become: true
   shell: 'touch /var/lib/rpm/*'
   changed_when: false
-  args:
-    warn: false
   when: ansible_distribution == 'Fedora' and ansible_distribution_major_version in ['20', '21']
 
 - block:
